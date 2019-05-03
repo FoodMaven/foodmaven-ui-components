@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import "assets/material-icons.css";
+
+$font-stack-primary: Lato;
+$font-stack-paragraph: Pt-Serif;
+
+$green: #38B449;
+$green-dark: #447445;
+$green-light: #96c93f;
+$white: #FFFFFF;
+$off-white: #eff0ef;
+$grey-light: #cbcdca;
+$grey: #888c87;
+$grey-dark: #646863;
+$black: #000000;
+$orange: #f59d1d;
+$orange-dark: #e47625;
+$blue: #3e92cc;
+$blue-dark: #295a8e;
+$yellow: #e9c428;
+$red: #ed1941;
+
+body {
+  font-family: $font-stack-primary;
+  margin: 0;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.snackbar-error {
+  background-color: $red !important;
+  color: $white !important;
+  position: relative;
+  bottom: 8px;
+}
+
+.multiline-tooltip {
+  white-space: pre-line;
+}
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+$md-foodmaven-green: (
+  50 : #e7f6e9,
+  100 : #c3e9c8,
+  200 : #9cdaa4,
+  300 : #74cb80,
+  400 : #56bf64,
+  500 : #38b449,
+  600 : #32ad42,
+  700 : #2ba439,
+  800 : #249c31,
+  900 : #178c21,
+  A100 : #c3ffc7,
+  A200 : #90ff97,
+  A400 : #5dff68,
+  A700 : #43ff50,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$md-foodmaven-blue: (
+  50 : #e8f2f9,
+  100 : #c5def0,
+  200 : #9fc9e6,
+  300 : #78b3db,
+  400 : #5ba2d4,
+  500 : #3e92cc,
+  600 : #388ac7,
+  700 : #307fc0,
+  800 : #2875b9,
+  900 : #1b63ad,
+  A100 : #e4f0ff,
+  A200 : #b1d5ff,
+  A400 : #7eb9ff,
+  A700 : #64abff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$md-foodmaven-red: (
+  50 : #fde3e8,
+  100 : #fabac6,
+  200 : #f68ca0,
+  300 : #f25e7a,
+  400 : #f03c5e,
+  500 : #ed1941,
+  600 : #eb163b,
+  700 : #e81232,
+  800 : #e50e2a,
+  900 : #e0081c,
+  A100 : #ffffff,
+  A200 : #ffd6d9,
+  A400 : #ffa3a9,
+  A700 : #ff8a91,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$foodmaven-primary: mat-palette($md-foodmaven-green);
+$foodmaven-accent: mat-palette($md-foodmaven-blue);
+
+// The warn palette is optional (defaults to red).
+$foodmaven-warn: mat-palette($md-foodmaven-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$foodmaven-theme: mat-light-theme($foodmaven-primary, $foodmaven-accent, $foodmaven-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($foodmaven-theme);

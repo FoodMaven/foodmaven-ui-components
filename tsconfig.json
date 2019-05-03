@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "fm-ui-components": [
+        "dist/fm-ui-components"
+      ],
+      "fm-ui-components/*": [
+        "dist/fm-ui-components/*"
+      ]
+    }
   }
 }

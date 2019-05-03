@@ -1,0 +1,22 @@
+<mat-form-field>
+  <mat-chip-list #charList>
+    <mat-chip *ngFor="let selected of selectedOptions"
+              [selectable]="false"
+              (removed)="removeValueFromSelected(selected)">
+      {{selected.value.name}}&nbsp;
+      <span *ngIf="selected.value.name !== selected.characteristic.name">({{selected.characteristic.name}})</span>
+      <mat-icon matChipRemove>cancel</mat-icon>
+    </mat-chip>
+    <input placeholder="Characteristics"
+           #charInput
+           [formControl]="characteristicFormControl"
+           [matAutocomplete]="auto"
+           [matChipInputFor]="charList">
+  </mat-chip-list>
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onValueSelected($event)">
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+      {{option.value.name}}
+      <span *ngIf="option.value.name !== option.characteristic.name">({{option.characteristic.name}})</span>
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
