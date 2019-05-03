@@ -1,0 +1,42 @@
+<code>&lt;fm-characteristics-input&gt;</code> allows the user to select any number of characteristics as long as all the characteristics are compatible.
+<br> <br>
+<div class="code">
+  <code>
+    @Input() allCharacteristics: <br>
+    &#123; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; implicitCharacteristic: Characteristic[], <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; scaledCharacteristic: Characteristic[], <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; singleGroupCharacteristic: Characteristic[], <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; multiGroupCharacteristic: Characteristic[] <br>
+    &#125;
+  </code>
+</div>
+
+<div class="input">
+  <fm-characteristics-input [allCharacteristics]="allCharacteristics"></fm-characteristics-input>
+</div>
+
+This component also allows for the prepopulation of characteristics. The identified characteristics must exist in the list of all characteristics in order to be automatically populated.
+<br><br>
+<div class="code">
+  <code>
+    @Input() identifiedCharacteristics:  IdentifiedCharacteristic[]<br>
+  </code>
+</div>
+
+  <br> where an identified characteristic is in the shape of: <br><br>
+
+<div>
+  <code>
+    &#123; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; externalCompId: string, <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; name: string, <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; value: string, <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; type: string <br>
+    &#125;
+  </code>
+</div>
+
+<div class="input">
+  <fm-characteristics-input [allCharacteristics]="allCharacteristics" [identifiedCharacteristics]="appliedCharacteristics"></fm-characteristics-input>
+</div>

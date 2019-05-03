@@ -1,0 +1,70 @@
+$green: #38B449;
+$green-dark: #447445;
+$green-light: #96c93f;
+$white: #FFFFFF;
+$off-white: #eff0ef;
+$grey-light: #cbcdca;
+$grey: #888c87;
+$grey-dark: #646863;
+$black: #000000;
+$orange: #f59d1d;
+$orange-dark: #e47625;
+$blue: #3e92cc;
+$blue-dark: #295a8e;
+$yellow: #e9c428;
+$red: #ed1941;
+
+.page {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 10% auto;
+
+  .header {
+    background-color: $white;
+    padding: 24px 0;
+    text-align: center;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 15% auto;
+    margin: 24px;
+    border: 1px solid $grey-light;
+
+    aside {
+      background-color: $off-white;
+      padding: 24px;
+
+      .title {
+        font-weight: 600;
+        padding-bottom: 16px;
+      }
+
+      .component-option {
+        cursor: pointer;
+        height: 48px;
+        line-height: 48px;
+        font-size: 16px;
+
+        &:hover {
+          color: $green;
+        }
+
+        &.active {
+          color: $green;
+        }
+      }
+    }
+
+    .content {
+      padding: 0 48px;
+
+      .title {
+        height: 64px;
+        line-height: 64px;
+        font-size: 24px;
+        padding: 16px 0;
+      }
+    }
+  }
+}

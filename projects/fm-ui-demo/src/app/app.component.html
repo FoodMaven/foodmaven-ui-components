@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="page">
+  <div class="header">
+    <img width="300" alt="FoodMaven Logo" src="../assets/logo-dark.svg">
+  </div>
+
+  <div class="container">
+    <aside>
+      <div class="title">Components</div>
+
+      <div class="component-option"
+           *ngFor="let component of componentKeys"
+           (click)="setActiveComponent(component)"
+           [ngClass]="{active: component === activeComponent}">
+        {{component}}
+      </div>
+    </aside>
+
+    <div class="content">
+      <div class="title">
+        {{activeComponent}}
+      </div>
+
+      <div *ngIf="activeComponent === components.CHARACTERISTICS_INPUT">
+        <fm-characteristic-input-demo></fm-characteristic-input-demo>
+      </div>
+    </div>
+  </div>
+</div>

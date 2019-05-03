@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+$font-stack-primary: Lato;
+$font-stack-paragraph: Pt-Serif;
+
+body {
+  font-family: $font-stack-primary;
+  margin: 0;
+}
+
+html, body {
+  height:100%;
+}
+
