@@ -1,27 +1,14 @@
-# FoodmavenUiComponents
+# FoodMaven UI Components
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+This repository contains shareable FoodMaven UI components.
 
-## Development server
+## Projects
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This repository contains two projects: `fm-ui-components` and `fm-ui-demo`. `fm-ui-components` is the actual components library that will be built and published as an external library. `fm-ui-demo` is an application that will be used to document and provide example usage of the library, and may also be used as a test harness.  
 
-## Code scaffolding
+A consequence of this is that any angular commands will have to be qualified with the right project. For example, to serve the demo app, instead of running `yarn start`, we would need to run `yarn start fm-ui-demo`. This also means we are able to build our component library and ui application separately.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## TODOs:
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Currently the content within the demo app is hard coded. If we ever want to host the demo app as a web app for use beyond local development, we will need to refactor the demo project to handle environments, add models, etc.
+- Typing across the two projects are very lightweight. The demo app has no types at all, and rely a lot on the knowledge of the shape of the data. The component library has a minimal set of models that may need to be improved.
