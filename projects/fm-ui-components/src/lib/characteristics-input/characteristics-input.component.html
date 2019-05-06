@@ -20,3 +20,13 @@
     </mat-option>
   </mat-autocomplete>
 </mat-form-field>
+
+
+<!--
+While this is the recommended approach by material for library usage, it makes a little less sense in this for a
+component library with no main page. Instead of loading this stylesheet into every component, we should be loading
+in the icons as assets to the library. Unfortunately this functionality is not yet supported by angular cli /
+ng-packagr: https://github.com/angular/angular-cli/issues/11071, https://github.com/ng-packagr/ng-packagr/issues/1092
+-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
