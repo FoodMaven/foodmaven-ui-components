@@ -18,9 +18,9 @@ $red: #ed1941;
   height: 100%;
   display: grid;
   grid-template-rows: 10% auto;
+  overflow: hidden;
 
   .header {
-    background-color: $white;
     padding: 24px 0;
     text-align: center;
   }
@@ -28,8 +28,9 @@ $red: #ed1941;
   .container {
     display: grid;
     grid-template-columns: 15% auto;
-    margin: 24px;
+    margin: 0 24px 24px 24px;
     border: 1px solid $grey-light;
+    overflow: hidden;
 
     aside {
       background-color: $off-white;
@@ -58,8 +59,10 @@ $red: #ed1941;
 
     .content {
       padding: 0 48px;
+      overflow-y: scroll;
 
       .title {
+        color: $green;
         height: 64px;
         line-height: 64px;
         font-size: 24px;

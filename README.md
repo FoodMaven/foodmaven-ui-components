@@ -8,6 +8,8 @@ This repository contains two projects: `fm-ui-components` and `fm-ui-demo`. `fm-
 
 A consequence of this is that any angular commands will have to be qualified with the right project. For example, to serve the demo app, instead of running `yarn start`, we would need to run `yarn start fm-ui-demo`. This also means we are able to build our component library and ui application separately.
 
+Due to the fact that the demo is referencing the component library through a module import instead of a local reference, ensure that the library is built by using `yarn build fm-ui-components` before starting the demo app.
+
 ## TODOs:
 
 - Currently the content within the demo app is hard coded. If we ever want to host the demo app as a web app for use beyond local development, we will need to refactor the demo project to handle environments, add models, etc.

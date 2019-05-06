@@ -16,7 +16,7 @@
   <fm-characteristics-input [allCharacteristics]="allCharacteristics"></fm-characteristics-input>
 </div>
 
-This component also allows for the prepopulation of characteristics. The identified characteristics must exist in the list of all characteristics in order to be automatically populated.
+This component also allows for the pre-population of characteristics. The identified characteristics must exist in the list of all characteristics in order to be automatically populated.
 <br><br>
 <div class="code">
   <code>
@@ -40,3 +40,7 @@ This component also allows for the prepopulation of characteristics. The identif
 <div class="input">
   <fm-characteristics-input [allCharacteristics]="allCharacteristics" [identifiedCharacteristics]="appliedCharacteristics"></fm-characteristics-input>
 </div>
+
+There are no output events associated with this component. Form related functionality should be handled in the implementor. In order to access the currently selected characteristics, a `ViewChild` should be created for this component. The `selectedOptions` field should then be available to pull data from.
+
+<br><br>
