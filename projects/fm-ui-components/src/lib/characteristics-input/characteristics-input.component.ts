@@ -28,19 +28,19 @@ export class CharacteristicsInputComponent implements OnChanges {
   selectedOptions: ValueWithCharacteristic[] = [];
   filteredOptions: Observable<string[] | ValueWithCharacteristic[]>;
 
-  constructor(private snackBar: MatSnackBar) {
-    this.filteredOptions = this.characteristicFormControl.valueChanges.pipe(
-      startWith(null),
-      map((filterString: string | null) => {
-        return filterString ? this._filter(filterString) : this._filterSelected();
-      })
-    );
-  }
+  constructor(private snackBar: MatSnackBar) {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes.allCharacteristics && changes.allCharacteristics.currentValue) {
       this.selectedOptions = [];
       this.characteristicValueOptions = this.extractValueCharacteristicPairs(changes.allCharacteristics.currentValue);
+
+      this.filteredOptions = this.characteristicFormControl.valueChanges.pipe(
+        startWith(null),
+        map((filterString: string | null) => {
+          return filterString ? this._filter(filterString) : this._filterSelected();
+        })
+      );
     }
 
     if (changes.identifiedCharacteristics && changes.identifiedCharacteristics.currentValue) {
@@ -139,6 +139,7 @@ export class CharacteristicsInputComponent implements OnChanges {
   }
 
   private _filter(value: string): ValueWithCharacteristic[] {
+    console.log('filtering');
     if (typeof value === 'string') {
       const filterValue = value.toLowerCase();
 

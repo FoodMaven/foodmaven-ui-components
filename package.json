@@ -1,15 +1,14 @@
 {
   "name": "foodmaven-ui-components",
   "version": "0.0.1",
-  "main": "dist/fm-ui-components.d.ts",
-  "files": ["dist"],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "yarn build && cd dist/fm-ui-components && npm publish --access public"
   },
   "private": true,
   "dependencies": {
