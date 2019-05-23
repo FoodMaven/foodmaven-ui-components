@@ -15,8 +15,7 @@
   </mat-chip-list>
   <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onValueSelected($event)">
     <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-      {{option.value.name}}
-      <span *ngIf="option.value.name !== option.characteristic.name">({{option.characteristic.name}})</span>
+      {{option.getDisplayName()}}
     </mat-option>
   </mat-autocomplete>
 </mat-form-field>
