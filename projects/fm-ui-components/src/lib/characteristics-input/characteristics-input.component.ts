@@ -3,35 +3,13 @@ import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { MatAutocompleteSelectedEvent, MatSnackBar } from '@angular/material';
-import { Characteristic, CharacteristicsByType, CharacteristicTypes, IdentifiedCharacteristic } from '../models/characteristic.model';
-import {Value, ValueAlias} from '../models/value.model';
-
-class ValueWithCharacteristic {
-  characteristic: Characteristic;
-  value: Value;
-  alias?: string;
-
-  constructor(char: Characteristic, val: Value) {
-    this.characteristic = char;
-    this.value = val;
-  }
-
-  getDisplayName(): string {
-    let displayName = '';
-    if (this.value.name !== this.characteristic.name) {
-      displayName = `${this.characteristic.name}: ${this.value.name}`;
-    } else {
-      displayName = this.value.name;
-    }
-
-    if (this.alias) {
-      return displayName + ` (${this.alias})`;
-    }
-
-
-    return displayName;
-  }
-}
+import {
+  CharacteristicsByType,
+  CharacteristicTypes,
+  IdentifiedCharacteristic,
+  ValueWithCharacteristic,
+} from '../models/characteristic.model';
+import { ValueAlias } from '../models/value.model';
 
 @Component({
   selector: 'fm-characteristics-input',
