@@ -147,9 +147,7 @@ export class CharacteristicsInputComponent implements OnChanges {
         const isPossibleSelection = joinedNameWithAlias.toLowerCase().indexOf(filterValue) >= 0
           && this.selectedOptions.indexOf(characteristicValue) < 0;
 
-        // tslint:disable-next-line:max-line-length
         if (isPossibleSelection && aliases.find((alias: string) => alias.toLowerCase() === filterValue)) {
-          // tslint:disable-next-line:max-line-length
           characteristicValue.alias = aliases.find((alias: string) => alias.toLowerCase() === filterValue);
         } else {
           characteristicValue.alias = undefined;
