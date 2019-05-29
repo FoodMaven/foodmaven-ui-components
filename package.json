@@ -1,6 +1,6 @@
 {
-  "name": "foodmaven-ui-components",
-  "version": "0.0.2",
+  "name": "@foodmaven/foodmaven-ui-components",
+  "version": "0.0.4",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -136,7 +136,6 @@ export class CharacteristicsInputComponent implements OnChanges {
   }
 
   private _filter(value: string): ValueWithCharacteristic[] {
-    console.log('filtering');
     if (typeof value === 'string') {
       const filterValue = value.toLowerCase();
 
