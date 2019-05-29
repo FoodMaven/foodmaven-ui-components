@@ -1,0 +1,10 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/*
+ * Public API Surface of fm-ui-components
+ */
+export { CharacteristicsInputComponent } from './lib/characteristics-input/characteristics-input.component';
+export { FmUiComponentsModule } from './lib/fm-ui-components.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0Bmb29kbWF2ZW4vZm0tdWktY29tcG9uZW50cy8iLCJzb3VyY2VzIjpbInB1YmxpYy1hcGkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUlBLDhDQUFjLDZEQUE2RCxDQUFDO0FBQzVFLHFDQUFjLCtCQUErQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLypcbiAqIFB1YmxpYyBBUEkgU3VyZmFjZSBvZiBmbS11aS1jb21wb25lbnRzXG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9saWIvY2hhcmFjdGVyaXN0aWNzLWlucHV0L2NoYXJhY3RlcmlzdGljcy1pbnB1dC5jb21wb25lbnQnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvZm0tdWktY29tcG9uZW50cy5tb2R1bGUnO1xuIl19
