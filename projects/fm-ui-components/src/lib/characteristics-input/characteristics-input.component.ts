@@ -20,6 +20,7 @@ import { ValueAlias } from '../models/value.model';
 export class CharacteristicsInputComponent implements OnChanges {
   @Input() allCharacteristics!: CharacteristicsByType;
   @Input() identifiedCharacteristics!: IdentifiedCharacteristic[];
+  @Input() readOnly = false;
 
   @ViewChild('charInput') characteristicInput!: ElementRef<HTMLInputElement>;
 
