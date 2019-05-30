@@ -14,7 +14,7 @@
            [matChipInputFor]="charList">
   </mat-chip-list>
   <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onValueSelected($event)">
-    <mat-option [disabled]="this.readOnly" *ngFor="let option of filteredOptions | async" [value]="option">
+    <mat-option [disabled]="readOnly" *ngFor="let option of filteredOptions | async" [value]="option">
       {{option.getSearchName()}}
     </mat-option>
   </mat-autocomplete>
