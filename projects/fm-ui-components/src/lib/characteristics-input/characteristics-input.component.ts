@@ -24,7 +24,7 @@ export class CharacteristicsInputComponent implements OnChanges {
 
   @ViewChild('charInput') characteristicInput!: ElementRef<HTMLInputElement>;
 
-  characteristicFormControl = new FormControl('');
+  characteristicFormControl = new FormControl({ value: '', disabled: this.readOnly });
   characteristicValueOptions: ValueWithCharacteristic[] = [];
   selectedOptions: ValueWithCharacteristic[] = [];
   filteredOptions: Observable<string[] | ValueWithCharacteristic[]>;
