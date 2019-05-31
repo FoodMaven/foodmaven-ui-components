@@ -2,6 +2,7 @@
   <mat-chip-list #charList>
     <mat-chip *ngFor="let selected of selectedOptions"
               [selectable]="false"
+              [removable]="!readOnly"
               (removed)="removeValueFromSelected(selected)">
       {{selected.getChipName()}}&nbsp;
       <mat-icon matChipRemove>cancel</mat-icon>
@@ -13,7 +14,7 @@
            [matChipInputFor]="charList">
   </mat-chip-list>
   <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onValueSelected($event)">
-    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+    <mat-option [disabled]="readOnly" *ngFor="let option of filteredOptions | async" [value]="option">
       {{option.getSearchName()}}
     </mat-option>
   </mat-autocomplete>

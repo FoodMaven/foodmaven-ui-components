@@ -20,10 +20,11 @@ import { ValueAlias } from '../models/value.model';
 export class CharacteristicsInputComponent implements OnChanges {
   @Input() allCharacteristics!: CharacteristicsByType;
   @Input() identifiedCharacteristics!: IdentifiedCharacteristic[];
+  @Input() readOnly = false;
 
   @ViewChild('charInput') characteristicInput!: ElementRef<HTMLInputElement>;
 
-  characteristicFormControl = new FormControl('');
+  characteristicFormControl = new FormControl({ value: '', disabled: this.readOnly });
   characteristicValueOptions: ValueWithCharacteristic[] = [];
   selectedOptions: ValueWithCharacteristic[] = [];
   filteredOptions: Observable<string[] | ValueWithCharacteristic[]>;

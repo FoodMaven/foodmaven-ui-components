@@ -44,3 +44,13 @@ This component also allows for the pre-population of characteristics. The identi
 There are no output events associated with this component. Form related functionality should be handled in the implementor. In order to access the currently selected characteristics, a <code>ViewChild</code> should be created for this component. The <code>selectedOptions</code> field should then be available to pull data from.
 
 <br><br>
+
+This component also allows for an optional readonly mode - where prepopulated characteristics cannot be removed and new characteristics cannot be added.
+
+<br><br>
+
+<div class="input">
+  <fm-characteristics-input [readOnly]="true" [allCharacteristics]="allCharacteristics" [identifiedCharacteristics]="appliedCharacteristics"></fm-characteristics-input>
+</div>
+
+<br><br>
