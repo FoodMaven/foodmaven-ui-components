@@ -7,7 +7,7 @@
       {{selected.getChipName()}}&nbsp;
       <mat-icon matChipRemove>cancel</mat-icon>
     </mat-chip>
-    <input placeholder="Characteristics"
+    <input placeholder="{{getCharacteristicPlaceholder()}}"
            #charInput
            [formControl]="characteristicFormControl"
            [matAutocomplete]="auto"

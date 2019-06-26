@@ -110,6 +110,10 @@ export class CharacteristicsInputComponent implements OnChanges {
 
   }
 
+  getCharacteristicPlaceholder(): string {
+    return this.readOnly ? 'Characteristics' : 'Select characteristics';
+  }
+
   private validateSelectedValue(charValue: ValueWithCharacteristic): boolean {
     let valid = true;
 
